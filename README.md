@@ -24,13 +24,22 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+API made for the backend test to Anota Ai.
 
 ## Installation
 
 ```bash
 $ npm install
 ```
+## Requisites
+
+```bash
+# postgres
+
+# typeorm
+
+```
+
 
 ## Running the app
 
@@ -45,18 +54,6 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
@@ -67,6 +64,31 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## How to use 
+<p>Use base url with endpoints</p>
+
+
+##### base url
+`url: localhost:3000/`
+
+##### Auth
+  Sign Up: POST `url/auth/signup`
+  Sign In: POST `url/auth/signin`
+
+  **_In the body of the request, the username and password must be informed, the password being a minimum of 8 characters and a maximum of 20, having to have at least one uppercase letter, one lowercase letter, a symbol and a number. The username must have a minimum value of 4 and a maximum of 20 characters._**
+
+##### Products
+
+  **_All the endpoints below can only be accessed if an authenticated user makes the request, when the user authenticates, a jwt token is returned that will give access to the endpoints of the products. This jwt token is valid for 1 hour._**
+
+  Get all Products: GET `url/product`
+  Get product filtering by title: GET `url/products/?title=value`
+  Get product filtering by category: GET `url/products/?category=value`
+  Create new product: POST `url/product`
+    **To create a new product, the title, description, price and category must be informed in the body of the request.**
+  Update new product: PUT `url/product/productId`
+  delete product: DELETE `url/product/productId`
 
 ## License
 
