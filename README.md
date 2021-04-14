@@ -72,23 +72,28 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ##### base url
 `url: localhost:3000/`
 
-##### Auth
-  Sign Up: POST `url/auth/signup`
-  Sign In: POST `url/auth/signin`
-
+### Auth
+  <ul>
+  <li>Sign Up: POST `url/auth/signup`</li>
+  <li>Sign In: POST `url/auth/signin`</li>
+  </ul>
   **_In the body of the request, the username and password must be informed, the password being a minimum of 8 characters and a maximum of 20, having to have at least one uppercase letter, one lowercase letter, a symbol and a number. The username must have a minimum value of 4 and a maximum of 20 characters._**
 
-##### Products
+### Products
 
   **_All the endpoints below can only be accessed if an authenticated user makes the request, when the user authenticates, a jwt token is returned that will give access to the endpoints of the products. This jwt token is valid for 1 hour._**
 
-  Get all Products: GET `url/product`
-  Get product filtering by title: GET `url/products/?title=value`
-  Get product filtering by category: GET `url/products/?category=value`
-  Create new product: POST `url/product`
-    **To create a new product, the title, description, price and category must be informed in the body of the request.**
-  Update new product: PUT `url/product/productId`
-  delete product: DELETE `url/product/productId`
+  <ul>
+  <li>Get all Products: GET `url/product`</li>
+  <li>Get product filtering by title: GET `url/products/?title=value`</li>
+  <li>Get product filtering by category: GET `url/products/?category=value`</li>
+  <li>Create new product: POST `url/product`</li>
+
+  <li>Update new product: PUT `url/product/productId`</li>
+  <li>Delete product: DELETE `url/product/productId`</li>
+  </ul>
+
+  **To create a new product, the title, description, price and category must be informed in the body of the request.**
 
 ## License
 
